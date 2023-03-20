@@ -1,7 +1,16 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-
+/* bac.txt
+5
+4 8 9 16 25
+3
+8
+16
+7
+25
+10
+*/
 
 int main(){
     ifstream bac("bac.txt");
@@ -16,7 +25,7 @@ int main(){
     while(bac >> nr)
         {
             int sol = -1; int l = 0; int r = n;
-            while(l <= r){
+            while(l <= r){ //binary search
                 int m = (l + r) / 2;
                 if (sir1[m] == nr){
                     c++;
